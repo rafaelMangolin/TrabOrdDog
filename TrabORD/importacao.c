@@ -4,9 +4,12 @@
 
 int main(){
     FILE *fpi;
-    fpi = fopen("individuos.txt","r+");
+    // fpi = fopen("individuos.txt","r+");
+    // FILE *fpif;
+    // fpif = fopen("individuosFormatados.txt","w+");
+    fpi = fopen("racas-grupos.txt","r+");
     FILE *fpif;
-    fpif = fopen("individuosFormatados.txt","w+");
+    fpif = fopen("racas-gruposFormatados.txt","w+");
     char aux, field_buffer[400], buffer[400];
     int count = 0, i = 0;
     short length;
@@ -33,7 +36,6 @@ int main(){
             	fwrite(buffer, 1, length, fpif);
             	buffer[0]='\0';
             	count = 0;
-            	getchar();
             }
     	}else{
         	i = 0;
