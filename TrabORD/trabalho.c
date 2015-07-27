@@ -10,7 +10,6 @@ struct lista{
     int prox_i2;
 };
 
-
 int main(){
     int escolha, offset_count;
 
@@ -241,7 +240,7 @@ void buscarPorIndice(struct lista list[], int count, char frase[], char arqName[
             buffer[0]='\0';
             fread(&length, 1, sizeof(length),fp);
             fread(buffer, 1, length, fp);
-            buffer[strlen(buffer)]='\0';
+            buffer[length]='\0';
             printf("registro %s, length %i\n", buffer, length);
         }
     }else {
@@ -583,7 +582,3 @@ void inserirIndividuo(struct lista lista1[], int *count1, struct lista lista2[],
 
     quickSort(lista1,0,*count1-1);
 }
-
-
-
-
